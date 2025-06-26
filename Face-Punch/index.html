@@ -575,7 +575,7 @@
         let watchId = null;
 
         // API base URL
-        const API_BASE_URL = 'http://localhost:3000/api';
+        const API_BASE_URL = 'http://34.229.100.84:3070/api';
 
         // Update date and time
         function updateDateTime() {
@@ -706,7 +706,7 @@
 
                 // Check secure context
                 if (!window.isSecureContext) {
-                    throw new Error('SecurityError: Camera access requires a secure context (HTTPS or localhost).');
+                    throw new Error('SecurityError: Camera access requires a secure context (HTTPS or 34.229.100.84).');
                 }
 
                 // Load face-api.js models
@@ -796,7 +796,7 @@
                 } else if (err.name === 'NotSupportedError') {
                     errorMessage += 'No supported camera source found. Try using a different device or browser.';
                 } else if (err.name === 'SecurityError') {
-                    errorMessage += 'Camera access is only allowed in secure contexts (HTTPS or localhost).';
+                    errorMessage += 'Camera access is only allowed in secure contexts (HTTPS or 34.229.100.84).';
                 } else if (err.name === 'OverconstrainedError') {
                     errorMessage += 'Camera constraints are not supported by this device.';
                 } else {
@@ -936,7 +936,7 @@
                 
                 setTimeout(() => {
                     successMessage.style.display = 'none';
-                }, 3000);
+                }, 3070);
             } catch (err) {
                 console.error('Error saving attendance:', err);
                 alert(err.message || 'Failed to record attendance. Please try again.');
